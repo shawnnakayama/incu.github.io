@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>サービス | INCU Consulting</title>
   <style>
+      .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .service-box {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.6s forwards;
+  }
+
+  .service-box:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .service-box:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+
+  .service-box:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  .service-box:nth-child(4) {
+    animation-delay: 0.7s;
+  }
+
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
     header { background: #003366; color: white; padding: 20px; text-align: center; }
 	nav { background: #0055a5; padding: 10px; text-align: center; }
@@ -37,10 +72,10 @@
       align-self: flex-end;
     }
 
-    .bv { background: #4e5af2; }
-    .ad { background: #ff5a36; }
-    .ff { background: #7a7668; }
-    .ac { background: #d50f0f; }
+    .bv { background: #2A4D91; }
+    .ad { background: #3C5D99; }
+    .ff { background: #536B99; }
+    .ac { background: #697BA2; }
   </style>
 
 <style>
@@ -87,7 +122,7 @@
   </div>
 <div style="position: absolute; top: 20px; right: 20px;">
     <a href="services.html" style="text-decoration: none; color: white; display: flex; align-items: center; gap: 5px;">
-    <img src="イギリス国旗.webp" alt="English" style="height: 18px; vertical-align: middle;">
+    <img src="usflag.webp" alt="English" style="height: 18px; vertical-align: middle;">
     <span style="font-size: 14px;">English</span>
   </a>
 </div>
