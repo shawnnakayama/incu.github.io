@@ -1,0 +1,114 @@
+# Allow all search engines and general bots
+User-agent: *
+Disallow:
+
+# Block aggressive SEO crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SEOkicks-Robot
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: YisouSpider
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+# Block AI training & scrapers
+User-agent: CCBot
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+User-agent: Curl
+Disallow: /
+
+# Generic command-line tools often used in scraping/hacking
+User-agent: Wget
+Disallow: /
+
+User-agent: Curl
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Python-urllib
+Disallow: /
+
+User-agent: libwww-perl
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: Go-http-client
+Disallow: /
+
+User-agent: Java
+Disallow: /
+
+# Known vulnerability scanners / pentesting tools
+User-agent: sqlmap
+Disallow: /
+
+User-agent: Nikto
+Disallow: /
+
+User-agent: Nmap
+Disallow: /
+
+User-agent: Masscan
+Disallow: /
+
+# AI / data harvesting bots
+User-agent: CCBot
+Disallow: /
+
+# Misc aggressive bots & scrapers
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: YisouSpider
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
