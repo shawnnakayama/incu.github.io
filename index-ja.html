@@ -76,7 +76,101 @@
 </nav>
 
 
-<main>
+<main style="padding-bottom: 50px;">
+
+<style>
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out both;
+  }
+
+  .stat-item {
+    color: #003366;
+  }
+
+  .stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }<style>
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out both;
+  }
+
+  .stat-item {
+    color: #003366;
+  }
+
+  .stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .plus {
+    font-size: 48px;
+    font-weight: bold;
+    color: #003366;
+    margin-left: 2px;
+  }
+
+  .stat-label {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<div class="stats-container">
+  <div class="stat-item">
+  <span class="stat-number" data-target="100" data-speed="20">0</span><span class="plus">+</span>
+    <div class="stat-label"><div class="barlow-text">取引先数</div></div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="20" data-speed="120">0</span><span class="plus">+</span>
+    <div class="stat-label"><div class="barlow-text">対応州数</div></div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="21">0</span>
+    <div class="stat-label"><div class="barlow-text">経験年数</div></div>
+  </div>
+</div>
+  
 <h2 style="color: #003366;">INCUコンサルティングへようこそ</h2>
 
 <p class="font_8 wixui-rich-text__text" style="font-size:20px; line-height:normal; text-align:justify;"><span class="wixui-rich-text__text" style="font-size:20px;"><span class="wixui-rich-text__text" style="font-family:barlow-medium,barlow,sans-serif;"><span class="color_15 wixui-rich-text__text"><span class="wixui-rich-text__text" style="letter-spacing:0.03em;">INCUは、企業価値評価、会計、税務を含めたアドバイザリーサービスの分野で日系企業を支援することに焦点を当てています。私たちは、日本語、英語に堪能なバイリンガルのスペシャリストとスタッフのネットワークを持つブティックコンサルティング会社です。</span></span></span></span></p>
@@ -89,5 +183,46 @@
 <footer>
     © 2025 INCU Consulting. All rights reserved.
 </footer>
+
+
+<script>
+  const counters = document.querySelectorAll('.stat-number');
+
+  const runCounter = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const speedAttr = counter.getAttribute('data-speed');
+      const speed = speedAttr ? +speedAttr : 100; // Default speed is 100
+      const increment = Math.ceil(target / speed);
+
+      const updateCount = () => {
+        const count = +counter.innerText;
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        runCounter();
+        observer.disconnect();
+      }
+    });
+  });
+
+  observer.observe(document.querySelector('.stats-container'));
+</script>
+
+
+
+
 </body>
 </html>

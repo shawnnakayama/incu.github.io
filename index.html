@@ -2,6 +2,8 @@
 
 <html lang="en">
 <head>
+
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>INCU Consulting - Business Valuation</title>
@@ -12,8 +14,25 @@
 		nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
         main { padding: 20px; }
         footer { background: #003366; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+section.company-description p {
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  color: #000; /* Or inherit if you prefer */
+}
+
+}
+
+
     </style>
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
+
 </head>
 <body>
 <header style="
@@ -73,18 +92,164 @@
   <a href="contact.html">Contact Us</a>
 </nav>
 
-<main>
-<h2 style="color: #003366;">Welcome to INCU Consulting!</h2>
+<main style="padding-bottom: 50px;">
 
-<p class="font_8 wixui-rich-text__text" style="font-size:20px; line-height:normal; text-align:justify;"><span class="wixui-rich-text__text" style="font-size:20px;"><span class="wixui-rich-text__text" style="font-family:barlow-medium,barlow,sans-serif;"><span class="color_15 wixui-rich-text__text"><span class="wixui-rich-text__text" style="letter-spacing:0.03em;">Here at INCU Consulting LLC, our business practice focuses on assisting Japanese and Chinese-related companies in the areas of business valuation, accounting, tax, and advisory services. We are a boutique consulting firm with a network of bilingual specialists and staff members fluent in Japanese, Chinese and English. </span></span></span></span></p>
-<p class="font_8 wixui-rich-text__text" style="font-size:20px; line-height:normal; text-align:justify;"><span class="wixui-rich-text__text" style="font-size:20px;"><span class="wixui-rich-text__text" style="font-family:barlow-medium,barlow,sans-serif;"><span class="color_15 wixui-rich-text__text"><span class="wixui-rich-text__text" style="letter-spacing:0.03em;">Our boutique firm provides high level personal service and is part of an international network of industry experts. We collaborate with an international team of experts to bring our clients the most highly customized valuations and financial advisory service. Whether it is for business M&A, fraud detection, tax reduction, or accounting service, we can help. </span></span></span></span></p>
-<h2 style="color: #003366;">Why Choose INCU?</h2>
+<style>
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out both;
+  }
 
-<p class="font_8 wixui-rich-text__text" style="font-size:20px; line-height:normal; text-align:justify;"><span class="wixui-rich-text__text" style="font-size:20px;"><span class="wixui-rich-text__text" style="font-family:barlow-medium,barlow,sans-serif;"><span class="color_15 wixui-rich-text__text"><span class="wixui-rich-text__text" style="letter-spacing:0.03em;">At INCU Consulting, we are committed to excellence in everything we do. Our goal is to exceed our client’s expectations at all times. We are committed to delivering timely results and personalized attention to every engagement. Our low overhead and experienced staff allow us to provide unrivaled value to our clients.</span></span></span></p>
+  .stat-item {
+    color: #003366;
+  }
+
+  .stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }<style>
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out both;
+  }
+
+  .stat-item {
+    color: #003366;
+  }
+
+  .stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .plus {
+    font-size: 48px;
+    font-weight: bold;
+    color: #003366;
+    margin-left: 2px;
+  }
+
+  .stat-label {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<div class="stats-container">
+  <div class="stat-item">
+  <span class="stat-number" data-target="100" data-speed="20">0</span><span class="plus">+</span>
+    <div class="stat-label"><div class="barlow-text">Clients Served</div></div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="20" data-speed="120">0</span><span class="plus">+</span>
+    <div class="stat-label"><div class="barlow-text">States</div></div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="21">0</span>
+    <div class="stat-label"><div class="barlow-text">Years of Experience</div></div>
+  </div>
+</div>
+
+
+<section class="company-description">
+    <h2 style="color: #003366;">Welcome to INCU Consulting!</h2>
+  <p>
+    Here at INCU Consulting LLC, our business practice focuses on assisting Japanese and Chinese-related companies in the areas of business valuation, accounting, tax, and advisory services. We are a boutique consulting firm with a network of bilingual specialists and staff members fluent in Japanese, Chinese, and English. Our offices are located in Washington State, Oregon, Illinois, and North Carolina.
+  </p>
+
+  <p>
+    Our boutique firm provides high level personal service and is part of an international network of industry experts. We collaborate with an international team of experts to bring our clients the most highly customized valuations and financial advisory service. Whether it is for business M&A, fraud detection, tax reduction, or accounting service, we can help.
+  </p>
+
+  <h2 style="color: #003366;">Why Choose INCU?</h2>
+
+  <p>
+    At INCU Consulting, we are committed to excellence in everything we do. Our goal is to exceed our client’s expectations at all times. We are committed to delivering timely results and personalized attention to every engagement. Our low overhead and experienced staff allow us to provide unrivaled value to our clients.
+  </p>
+</section>
+
+</div>
+
+
 
 </main>
 <footer>
     © 2025 INCU Consulting. All rights reserved.
 </footer>
+
+<script>
+  const counters = document.querySelectorAll('.stat-number');
+
+  const runCounter = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const speedAttr = counter.getAttribute('data-speed');
+      const speed = speedAttr ? +speedAttr : 100; // Default speed is 100
+      const increment = Math.ceil(target / speed);
+
+      const updateCount = () => {
+        const count = +counter.innerText;
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        runCounter();
+        observer.disconnect();
+      }
+    });
+  });
+
+  observer.observe(document.querySelector('.stats-container'));
+</script>
+
+
 </body>
 </html>
