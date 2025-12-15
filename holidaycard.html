@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Season's Greetings! | INCU Consulting</title>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    position: relative;
+    background-image: url('pdxchristmas.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: overlay;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .branding img {
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  nav {
+    background: crimson;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .lang-switch a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .lang-switch img {
+    height: 18px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="branding">
+    <img src="santa.png" alt="INCU Logo">
+    <div>
+      <h1 style="margin-bottom:5px;"><i>INCU CONSULTING LLC</i></h1>
+      <h3 style="margin-top:0;">Valuation and Accounting Solutions since 2004</h3>
+    </div>
+  </div>
+
+  <div class="lang-switch">
+    <a href="privacy-policy-ja.html">
+      <img src="jp.png" alt="日本語">
+      <span>日本語</span>
+    </a>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="services.html">Service</a>
+  <a href="about.html">Meet Our Team</a>
+  <a href="management-principles.html">Management Principles</a>
+  <a href="fasb-updates.html">FASB Updates</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="price-quote.html">Price Quote</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="holidaycard.html" id="holiday-link" style="display:none;">
+    Happy Holidays!
+  </a>
+</nav>
+
+
+<main>
+
+  <div style="width:100%; max-width:1200px; margin:0 auto; aspect-ratio:16 / 9; border-radius:8px; box-shadow:0 2px 8px rgba(63,69,81,0.16); overflow:hidden;">
+    <iframe
+      src="https://www.canva.com/design/DAG7nEUH4RQ/hnMKR8KkUBBa9JDbPHSsAg/watch?embed"
+      loading="lazy"
+      allowfullscreen
+      style="width:100%; height:100%; border:0;">
+    </iframe>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2025 INCU Consulting. All rights reserved.
+</footer>
+
+</body>
+<script>
+  (function () {
+    const now = new Date();
+    const month = now.getMonth(); // 0 = Jan, 11 = Dec
+    const day = now.getDate();
+
+    if (month === 11 || (month === 0 && day <= 5)) {
+      document.getElementById('holiday-link').style.display = 'inline-block';
+    }
+  })();
+</script>
+
+</html>

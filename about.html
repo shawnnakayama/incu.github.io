@@ -70,7 +70,11 @@
   <a href="privacy-policy.html">Privacy Policy</a>
   <a href="price-quote.html">Price Quote</a>
   <a href="contact.html">Contact Us</a>
+  <a href="holidaycard.html" id="holiday-link" style="display:none;">
+    Happy Holidays!
+  </a>
 </nav>
+
 
 <main style="padding-bottom: 50px;">
   <h2 style="color: #003366;">About Our Team</h2>
@@ -89,7 +93,7 @@
   <div style="display: flex; align-items: flex-start; margin-top: 30px;">
     <img src="li.avif" alt="Li Xu" style="width: 140px; height: auto; border-radius: 4px; margin-right: 20px;">
     <div>
-      <p><strong style="color: #003366;">Li Xu, Ph.D, CFA, CMA, CAMS, CFE</strong></p>
+      <p><strong style="color: #003366;">Li Xu, Ph.D, CMA, CAMS, CFE</strong></p>
       <p>With strong expertise in data analytics, Li excels at summarizing complex data to help clients find solutions to tax and financial questions. She has developed forecasting models that allow clients, both established and emerging business owners, to see their potential future financial statements and identify and change the driving factors to achieve profitable results.</p>
       <p>Li has served as an ad hoc reviewer for many premier business journals such as <i>Review of Quantitative Finance and Accounting</i>, <i>Journal of Business, Finance and Accounting</i>, <i>Journal of International Financial Management & Accounting</i>, <i>Journal of Empirical Legal Studies</i>, <i>Journal of Corporate Finance</i> and <i>Managerial Finance</i>.</p>
       <p>She has published in <i>Journal of Business, Finance and Accounting</i>, <i>Journal of Financial and Quantitative Analysis</i>, <i>Review of Financial Studies</i>, <i>Journal of Banking and Finance</i>, and <i>Accounting Educators Journal</i>. She received her MS in Finance from Suffolk University and DBA in Accounting from Duke University. She is a Certified Fraud Examiner (CFE), a Certified Management Accountant (CMA), and a Certified Anti-Money Laundering Specialist (CAMS).</p> 
@@ -101,4 +105,15 @@
     © 2025 INCU Consulting. All rights reserved.
 </footer>
 </body>
+<script>
+  (function () {
+    const now = new Date();
+    const month = now.getMonth(); // 0 = Jan, 11 = Dec
+    const day = now.getDate();
+
+    if (month === 11 || (month === 0 && day <= 5)) {
+      document.getElementById('holiday-link').style.display = 'inline-block';
+    }
+  })();
+</script>
 </html>

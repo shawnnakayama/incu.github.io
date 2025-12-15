@@ -77,12 +77,20 @@
   <a href="privacy-policy.html">Privacy Policy</a>
   <a href="price-quote.html">Price Quote</a>
   <a href="contact.html">Contact Us</a>
+  <a href="holidaycard.html" id="holiday-link" style="display:none;">
+    Happy Holidays!
+  </a>
 </nav>
+
 
 <main>
   <h2>Accounting Standards Updates by Year</h2>
   <div class="update-card">
     <h3>2025</h3>
+    <p><a href="https://taxfoundation.org/research/all/federal/big-beautiful-bill-senate-gop-tax-plan/" target="_blank">
+  Impacts of the July 2025 Tax Act (One Big Beautiful Bill) 
+</a></p>
+
     <p><a href="https://www.fasb.org/standards/accounting-standard-updates?year=2025" target="_blank">View all ASUs issued in 2025</a></p>
   </div>
   <div class="update-card">
@@ -117,4 +125,15 @@
   </footer>
 
 </body>
+<script>
+  (function () {
+    const now = new Date();
+    const month = now.getMonth(); // 0 = Jan, 11 = Dec
+    const day = now.getDate();
+
+    if (month === 11 || (month === 0 && day <= 5)) {
+      document.getElementById('holiday-link').style.display = 'inline-block';
+    }
+  })();
+</script>
 </html>

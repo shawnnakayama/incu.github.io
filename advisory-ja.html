@@ -63,7 +63,7 @@
 </header>
 
 <nav>
-  <a href="index-ja.html">ホーム</a>
+  <a href="ja.html">ホーム</a>
   <a href="services-ja.html">サービス</a>
   <a href="about-ja.html">メンバー紹介</a>
   <a href="management-principles-ja.html">経営理念</a>
@@ -100,4 +100,15 @@
     &copy; 2025 INCU Consulting. All rights reserved.
   </footer>
 </body>
+<script>
+  (function () {
+    const now = new Date();
+    const month = now.getMonth(); // 0 = Jan, 11 = Dec
+    const day = now.getDate();
+
+    if (month === 11 || (month === 0 && day <= 5)) {
+      document.getElementById('holiday-link').style.display = 'inline-block';
+    }
+  })();
+</script>
 </html>

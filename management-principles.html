@@ -70,6 +70,9 @@
   <a href="privacy-policy.html">Privacy Policy</a>
   <a href="price-quote.html">Price Quote</a>
   <a href="contact.html">Contact Us</a>
+  <a href="holidaycard.html" id="holiday-link" style="display:none;">
+    Happy Holidays!
+  </a>
 </nav>
 
 <main style="padding-bottom: 50px;">
@@ -129,4 +132,15 @@
     © 2025 INCU Consulting. All rights reserved.
 </footer>
 </body>
+<script>
+  (function () {
+    const now = new Date();
+    const month = now.getMonth(); // 0 = Jan, 11 = Dec
+    const day = now.getDate();
+
+    if (month === 11 || (month === 0 && day <= 5)) {
+      document.getElementById('holiday-link').style.display = 'inline-block';
+    }
+  })();
+</script>
 </html>
