@@ -108,7 +108,7 @@
   </div>
 
   <div class="lang-switch">
-    <a href="privacy-policy-ja.html">
+    <a href="holidaycard.html">
       <img src="jp.png" alt="日本語">
       <span>日本語</span>
     </a>
@@ -140,15 +140,6 @@
     allowfullscreen
     style="width:100%; aspect-ratio:16 / 9; border:0; border-radius:8px; box-shadow:0 2px 8px rgba(63,69,81,0.16);">
   </iframe>
-
-  <p id="canva-fallback"
-     style="display:none; text-align:center; margin:1.5rem 0;">
-    his content may be blocked by your browser or privacy settings.<br>
-    <a href="https://www.canva.com/design/DAG7nEUH4RQ/hnMKR8KkUBBa9JDbPHSsAg/watch"
-       target="_blank" rel="noopener">
-      View the Holiday Card here →
-    </a>
-  </p>
 </div>
 
 </main>
@@ -172,27 +163,6 @@
 
 </script>
 
-<script>
-  (function () {
-    const iframe = document.getElementById('canva-iframe');
-    const fallback = document.getElementById('canva-fallback');
-
-    if (!iframe) return;
-
-    let loaded = false;
-
-    iframe.addEventListener('load', () => {
-      loaded = true;
-    });
-
-    setTimeout(() => {
-      if (!loaded) {
-        iframe.style.display = 'none';
-        fallback.style.display = 'block';
-      }
-    }, 2000);
-  })();
-</script>
 
 
 </html>
