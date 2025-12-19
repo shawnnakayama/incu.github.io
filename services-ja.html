@@ -167,8 +167,11 @@
 </main></div>
 
 <footer>
-  &copy; 2025 INCU Consulting. All rights reserved.
+  © <span id="year"></span> INCU Consulting. All rights reserved.
 </footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

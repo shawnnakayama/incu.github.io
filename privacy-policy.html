@@ -102,19 +102,27 @@
 </main>
     
 <footer>
-
-    &copy; 2025 INCU Consulting. All rights reserved.
+  © <span id="year"></span> INCU Consulting. All rights reserved.
 </footer>
 </body>
+
 <script>
   (function () {
     const now = new Date();
     const month = now.getMonth(); // 0 = Jan, 11 = Dec
     const day = now.getDate();
 
+    // Holiday nav link: Dec 1 – Jan 5
     if (month === 11 || (month === 0 && day <= 5)) {
       document.getElementById('holiday-link').style.display = 'inline-block';
+    }
+
+    // Auto year in footer
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+      yearSpan.textContent = now.getFullYear();
     }
   })();
 </script>
 </html>
+

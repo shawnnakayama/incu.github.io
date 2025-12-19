@@ -185,7 +185,7 @@ section.company-description p {
     <div class="stat-label"><div class="barlow-text">States</div></div>
   </div>
   <div class="stat-item">
-    <span class="stat-number" data-target="21">0</span>
+    <span class="stat-number" data-target="20">0</span></span><span class="plus">+</span>
     <div class="stat-label"><div class="barlow-text">Years of Experience</div></div>
   </div>
 </div>
@@ -214,8 +214,9 @@ section.company-description p {
 
 </main>
 <footer>
-    © 2025 INCU Consulting. All rights reserved.
+  © <span id="year"></span> INCU Consulting. All rights reserved.
 </footer>
+
 
 <script>
   const counters = document.querySelectorAll('.stat-number');
@@ -254,6 +255,7 @@ section.company-description p {
 </script>
 
 
+
 </body>
 <script>
   (function () {
@@ -265,6 +267,9 @@ section.company-description p {
       document.getElementById('holiday-link').style.display = 'inline-block';
     }
   })();
+</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </html>

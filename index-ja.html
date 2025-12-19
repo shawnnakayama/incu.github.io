@@ -166,7 +166,7 @@
     <div class="stat-label"><div class="barlow-text">対応州数</div></div>
   </div>
   <div class="stat-item">
-    <span class="stat-number" data-target="21">0</span>
+    <span class="stat-number" data-target="20">0</span></span><span class="plus">+</span>
     <div class="stat-label"><div class="barlow-text">経験年数</div></div>
   </div>
 </div>
@@ -181,8 +181,9 @@
 
 </main>
 <footer>
-    © 2025 INCU Consulting. All rights reserved.
+  © <span id="year"></span> INCU Consulting. All rights reserved.
 </footer>
+
 
 
 <script>
@@ -225,4 +226,7 @@
 
 
 </body>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </html>

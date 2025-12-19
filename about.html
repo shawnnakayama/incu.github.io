@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This website was coded by Shawn. All complaints can be directed to him. If you are reading this -- hello! -->
 
 <html lang="en">
 <head>
@@ -15,14 +16,14 @@
     </style>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body>  
 <header style="
   position: relative;
   background-image: url('la.jpg');
   background-size: cover;
   background-position: center 80%;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.4); /* Go Heels! */
+  background-color: rgba(0, 0, 0, 0.4); 
   background-blend-mode: overlay;
 ">
   <div style="display: flex; align-items: center; justify-content: center;">
@@ -102,17 +103,25 @@
 </main>
 
 <footer>
-    © 2025 INCU Consulting. All rights reserved.
+  © <span id="year"></span> INCU Consulting. All rights reserved.
 </footer>
 </body>
+
 <script>
   (function () {
     const now = new Date();
     const month = now.getMonth(); // 0 = Jan, 11 = Dec
     const day = now.getDate();
 
+    // Holiday nav link: Dec 1 – Jan 5
     if (month === 11 || (month === 0 && day <= 5)) {
       document.getElementById('holiday-link').style.display = 'inline-block';
+    }
+
+    // Auto year in footer
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+      yearSpan.textContent = now.getFullYear();
     }
   })();
 </script>
